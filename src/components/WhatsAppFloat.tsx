@@ -29,7 +29,7 @@ export default function WhatsAppFloat() {
     setHasInteracted(true);
     setIsTooltipVisible(false);
     
-    const phoneNumber = process.env.WHATSAPP_BUSINESS_NUMBER || '254725264955';
+    const phoneNumber = process.env.WHATSAPP_BUSINESS_NUMBER || '16018432762';
     const message = 'Hi! I would like to know more about SwifttDrop delivery services.';
     const contactUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(contactUrl, '_blank');

@@ -130,7 +130,7 @@ export async function GET(request: NextRequest) {
     trackingId,
     status: 'in_transit',
     message: 'Your package is on the way! Contact us on WhatsApp for real-time updates.',
-    whatsappNumber: process.env.WHATSAPP_BUSINESS_NUMBER || '254725264955',
+    whatsappNumber: process.env.WHATSAPP_BUSINESS_NUMBER || '16018432762',
     lastUpdated: new Date().toISOString()
   });
 }

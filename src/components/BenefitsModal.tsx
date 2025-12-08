@@ -165,10 +165,11 @@ export default function BenefitsModal({ onModalChange }: BenefitsModalProps) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="item-type" className="block text-sm font-medium text-gray-700 mb-2">
                   Item Type
                 </label>
                 <select
+                  id="item-type"
                   value={simulateData.itemType}
                   onChange={(e) => setSimulateData(prev => ({ ...prev, itemType: e.target.value }))}
                   className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-gray-800"
@@ -181,10 +182,11 @@ export default function BenefitsModal({ onModalChange }: BenefitsModalProps) {
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="distance" className="block text-sm font-medium text-gray-700 mb-2">
                   Estimated Distance (km)
                 </label>
                 <input
+                  id="distance"
                   type="range"
                   min="1"
                   max="20"
@@ -229,10 +231,11 @@ export default function BenefitsModal({ onModalChange }: BenefitsModalProps) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="deliveries-per-day" className="block text-sm font-medium text-gray-700 mb-2">
                   Target Deliveries Per Day
                 </label>
                 <input
+                  id="deliveries-per-day"
                   type="range"
                   min="1"
                   max="20"
@@ -248,10 +251,11 @@ export default function BenefitsModal({ onModalChange }: BenefitsModalProps) {
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="working-days-per-week" className="block text-sm font-medium text-gray-700 mb-2">
                   Working Days Per Week
                 </label>
                 <input
+                  id="working-days-per-week"
                   type="range"
                   min="1"
                   max="7"

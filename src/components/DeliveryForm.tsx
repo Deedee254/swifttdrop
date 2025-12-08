@@ -98,7 +98,7 @@ Please confirm this delivery request.
 `.trim();
 
     // Open WhatsApp with the formatted message
-    const phoneNumber = process.env.WHATSAPP_BUSINESS_NUMBER || '254725264955';
+    const phoneNumber = process.env.WHATSAPP_BUSINESS_NUMBER || '16018432762';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
     

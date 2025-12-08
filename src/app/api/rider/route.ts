@@ -34,7 +34,7 @@ const WEBHOOK_CONFIGS: WebhookConfig[] = [
 
 // WhatsApp number is defined in environment variables
 // Currently WhatsApp messaging is handled client-side
-// const whatsappNumber = process.env.WHATSAPP_BUSINESS_NUMBER || '254725264955';
+// const whatsappNumber = process.env.WHATSAPP_BUSINESS_NUMBER || '16018432762';
 
 async function sendToWebhooks(data: RiderData) {
   const webhookPromises = WEBHOOK_CONFIGS

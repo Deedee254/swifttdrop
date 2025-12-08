@@ -102,7 +102,7 @@ export default function Home() {
     if (!trackingInput.trim()) return;
     
     // Directly format and open WhatsApp message
-    const whatsappNumber = process.env.WHATSAPP_BUSINESS_NUMBER || '254725264955';
+    const whatsappNumber = process.env.WHATSAPP_BUSINESS_NUMBER || '16018432762';
     const message = `Track my delivery: ${trackingInput}`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -221,16 +221,7 @@ export default function Home() {
           
           {/* Background image with better visibility and responsiveness */}
           <div 
-            className="absolute inset-0 z-10"
-            style={{
-              backgroundImage: 'url(/hero-bg.png)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center center',
-              backgroundRepeat: 'no-repeat',
-              opacity: '0.9',
-              height: '100%',
-              width: '100%'
-            }}
+            className="absolute inset-0 z-10 hero-bg-image"
           ></div>
           
           {/* Simplified overlay for better image visibility */}
@@ -295,7 +286,7 @@ export default function Home() {
             
             <div className="grid gap-6 sm:gap-8 max-w-md mx-auto lg:mx-0 lg:max-w-none">
               {/* Track Your Delivery */}
-              <div className="p-6 sm:p-8 shadow-2xl animate-fade-in-up delay-300 rounded-2xl" style={{backgroundColor: '#DBEAFE'}}>
+              <div className="p-6 sm:p-8 shadow-2xl animate-fade-in-up delay-300 rounded-2xl bg-blue-100">
                 {/* Removed blur backgrounds */}
                 
                 <div className="relative z-10 space-y-5">
@@ -342,7 +333,7 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-t from-white to-transparent z-35"></div>
         
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-40 animate-bounce-custom" style={{animationDuration: '2s'}}>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-40 animate-bounce-custom animation-duration-2s">
           <div className="w-8 h-14 border-2 border-white/30 rounded-full flex items-start justify-center p-1">
             <div className="w-1.5 h-3 bg-white/60 rounded-full animate-pulse-custom"></div>
           </div>
@@ -381,7 +372,7 @@ export default function Home() {
                 <div 
                   key={index} 
                   className="group relative rounded-2xl p-8 bg-white shadow-xl hover:shadow-2xl transition-all duration-500 animate-fade-in-up border border-brand-light hover:border-brand-primary overflow-hidden transform hover:-translate-y-2"
-                  style={{ animationDelay: `${(index + 2) * 0.1}s` }}
+                  style={{ '--animation-delay': `${(index + 2) * 0.1}s` } as React.CSSProperties}
                 >
                   {/* Background color on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white to-brand-light/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -410,10 +401,10 @@ export default function Home() {
         <div className="absolute inset-0 opacity-20 bg-gradient-to-r from-blue-500 to-blue-700 bg-cover bg-center z-0"></div>
         
         {/* Animated particles */}
-        <div className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-white opacity-30 animate-pulse" style={{animationDuration: '3s'}}></div>
-        <div className="absolute top-3/4 left-1/3 w-3 h-3 rounded-full bg-white opacity-20 animate-pulse" style={{animationDuration: '4s'}}></div>
-        <div className="absolute top-1/3 right-1/4 w-5 h-5 rounded-full bg-white opacity-25 animate-pulse" style={{animationDuration: '5s'}}></div>
-        <div className="absolute top-2/3 right-1/3 w-3 h-3 rounded-full bg-white opacity-20 animate-pulse" style={{animationDuration: '3.5s'}}></div>
+        <div className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-white opacity-30 animate-pulse animation-duration-3s"></div>
+        <div className="absolute top-3/4 left-1/3 w-3 h-3 rounded-full bg-white opacity-20 animate-pulse animation-duration-4s"></div>
+        <div className="absolute top-1/3 right-1/4 w-5 h-5 rounded-full bg-white opacity-25 animate-pulse animation-duration-5s"></div>
+        <div className="absolute top-2/3 right-1/3 w-3 h-3 rounded-full bg-white opacity-20 animate-pulse animation-duration-3-5s"></div>
         
         <div className="container mx-auto px-4 relative z-20">
           <div className="max-w-5xl mx-auto">
@@ -441,7 +432,7 @@ export default function Home() {
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20 sm:py-28 relative overflow-hidden">
         {/* Background elements */}
-        <div className="absolute inset-0 z-0" style={{backgroundColor: '#F1F5F9'}}></div>
+        <div className="absolute inset-0 z-0 bg-slate-100"></div>
         
        
         
@@ -466,6 +457,7 @@ export default function Home() {
             <button
               onClick={prevTestimonials}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center text-brand-primary hover:bg-brand-primary hover:text-white transition-all duration-300 group"
+              aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
@@ -473,6 +465,7 @@ export default function Home() {
             <button
               onClick={nextTestimonials}
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center text-brand-primary hover:bg-brand-primary hover:text-white transition-all duration-300 group"
+              aria-label="Next testimonial"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -579,6 +572,8 @@ export default function Home() {
                       ? 'bg-brand-primary scale-125' 
                       : 'bg-brand-primary/30 hover:bg-brand-primary/60'
                   }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                  aria-current={currentTestimonialIndex === index ? 'true' : undefined}
                 />
               ))}
             </div>
@@ -611,7 +606,7 @@ export default function Home() {
       {/* Pricing Teaser Section */}
       <section id="pricing" className="py-20 sm:py-28 relative overflow-hidden">
         {/* Background elements */}
-        <div className="absolute inset-0 z-0" style={{backgroundColor: '#DBEAFE'}}></div>
+        <div className="absolute inset-0 z-0 bg-blue-100"></div>
         
         
         <div className="container mx-auto px-4 relative z-10">
@@ -634,7 +629,7 @@ export default function Home() {
               {/* Customer pricing card */}
               <div className="card rounded-3xl shadow-2xl overflow-hidden animate-fade-in-up">
                 {/* Background */}
-                <div className="absolute inset-0 z-0" style={{backgroundColor: '#F1F5F9'}}></div>
+                <div className="absolute inset-0 z-0 bg-slate-100"></div>
                 
                 
                 <div className="relative z-10 p-8 sm:p-10 md:p-12">
@@ -747,7 +742,7 @@ export default function Home() {
               {/* Rider pricing card */}
               <div className="card rounded-3xl shadow-2xl overflow-hidden animate-fade-in-up delay-100">
                 {/* Background */}
-                <div className="absolute inset-0 z-0" style={{backgroundColor: '#F1F5F9'}}></div>
+                <div className="absolute inset-0 z-0 bg-slate-100"></div>
                 
                 
                 <div className="relative z-10 p-8 sm:p-10 md:p-12">
@@ -833,7 +828,7 @@ export default function Home() {
       {/* FAQ Section */}
       <section id="faq" className="py-20 sm:py-28 relative overflow-hidden">
         {/* Background elements */}
-        <div className="absolute inset-0 z-0" style={{backgroundColor: '#F1F5F9'}}></div>
+        <div className="absolute inset-0 z-0 bg-slate-100"></div>
         
         
         <div className="container mx-auto px-4 relative z-10">
@@ -857,7 +852,7 @@ export default function Home() {
                 <div 
                   key={index} 
                   className="group relative rounded-2xl overflow-hidden transition-all duration-500 animate-fade-in-up"
-                  style={{ animationDelay: `${(index + 1) * 0.1}s` }}
+                  style={{ '--animation-delay': `${(index + 1) * 0.1}s` } as React.CSSProperties}
                 >
                   {/* Background gradient */}
                   <div className={`absolute inset-0 bg-gradient-to-br from-white to-brand-light/50 opacity-${activeFaq === index ? '100' : '0'} transition-opacity duration-500 z-0`}></div>
@@ -897,13 +892,13 @@ export default function Home() {
             </div>
             
             {/* Additional help */}
-            <div className="mt-12 text-center card card-highlight rounded-2xl p-8" style={{backgroundColor: '#DBEAFE'}}>
+            <div className="mt-12 text-center card card-highlight rounded-2xl p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Still have questions?</h3>
               <p className="text-gray-700 mb-6">
                 Can&apos;t find the answer you&apos;re looking for? Reach out to our customer support team.
               </p>
               <button 
-                onClick={() => window.open(`https://wa.me/${process.env.WHATSAPP_BUSINESS_NUMBER || '254725264955'}?text=I%20have%20a%20question%20about%20SwifttDrop`, '_blank')}
+                onClick={() => window.open(`https://wa.me/${process.env.WHATSAPP_BUSINESS_NUMBER || '16018432762'}?text=I%20have%20a%20question%20about%20SwifttDrop`, '_blank')}
                 className="btn btn-primary btn-md inline-flex items-center justify-center"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
@@ -923,10 +918,10 @@ export default function Home() {
         <div className="absolute inset-0 z-10">
         
           {/* Animated particles */}
-          <div className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-white opacity-20 animate-pulse" style={{animationDuration: '3s'}}></div>
-          <div className="absolute top-3/4 left-1/3 w-3 h-3 rounded-full bg-white opacity-10 animate-pulse" style={{animationDuration: '4s'}}></div>
-          <div className="absolute top-1/3 right-1/4 w-5 h-5 rounded-full bg-white opacity-15 animate-pulse" style={{animationDuration: '5s'}}></div>
-          <div className="absolute top-2/3 right-1/3 w-3 h-3 rounded-full bg-white opacity-10 animate-pulse" style={{animationDuration: '3.5s'}}></div>
+          <div className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-white opacity-20 animate-pulse animation-duration-3s"></div>
+          <div className="absolute top-3/4 left-1/3 w-3 h-3 rounded-full bg-white opacity-10 animate-pulse animation-duration-4s"></div>
+          <div className="absolute top-1/3 right-1/4 w-5 h-5 rounded-full bg-white opacity-15 animate-pulse animation-duration-5s"></div>
+          <div className="absolute top-2/3 right-1/3 w-3 h-3 rounded-full bg-white opacity-10 animate-pulse animation-duration-3-5s"></div>
           
         </div>
         
@@ -984,10 +979,10 @@ export default function Home() {
         
         {/* Animated particles */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-white opacity-30 animate-pulse" style={{animationDuration: '3s'}}></div>
-          <div className="absolute top-3/4 left-1/3 w-2 h-2 rounded-full bg-white opacity-20 animate-pulse" style={{animationDuration: '4s'}}></div>
-          <div className="absolute top-1/3 right-1/4 w-2 h-2 rounded-full bg-white opacity-25 animate-pulse" style={{animationDuration: '5s'}}></div>
-          <div className="absolute top-2/3 right-1/3 w-2 h-2 rounded-full bg-white opacity-20 animate-pulse" style={{animationDuration: '3.5s'}}></div>
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-white opacity-30 animate-pulse animation-duration-3s"></div>
+          <div className="absolute top-3/4 left-1/3 w-2 h-2 rounded-full bg-white opacity-20 animate-pulse animation-duration-4s"></div>
+          <div className="absolute top-1/3 right-1/4 w-2 h-2 rounded-full bg-white opacity-25 animate-pulse animation-duration-5s"></div>
+          <div className="absolute top-2/3 right-1/3 w-2 h-2 rounded-full bg-white opacity-20 animate-pulse animation-duration-3-5s"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-20">

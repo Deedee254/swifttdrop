@@ -49,11 +49,7 @@ export default function Offline() {
   };
 
   return (
-    <div className="min-h-screen text-white" style={{
-      backgroundImage: 'linear-gradient(to bottom right, var(--swift-blue-900), var(--swift-blue-800), var(--swift-blue-700))',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-    }}>
+    <div className="min-h-screen text-white bg-offline-gradient">
       {/* Simple header to mimic the main site */}
       <div className="border-b border-swift-blue-500/30 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-3 sm:py-4 flex items-center">

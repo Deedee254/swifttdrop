@@ -71,7 +71,7 @@ export default function HowItWorks() {
             <div 
               key={index} 
               className="w-1/3 px-4 relative z-10 animate-fade-in-up"
-              style={{ animationDelay: `${(index + 2) * 0.1}s` }}
+              style={{ '--animation-delay': `${(index + 2) * 0.1}s` } as React.CSSProperties}
             >
               <div className="relative rounded-2xl p-8 transition-all duration-500 group hover:shadow-2xl bg-white hover:shadow-swift-blue-200/40 border border-gray-100 hover:border-swift-blue-200 overflow-hidden">
                 {/* Background gradient on hover */}
@@ -104,7 +104,7 @@ export default function HowItWorks() {
         {/* Mobile view */}
         <div className="md:hidden space-y-12 max-w-sm mx-auto">
           {steps.map((step, index) => (
-            <div key={index} className="relative animate-fade-in-up" style={{ animationDelay: `${(index + 2) * 0.1}s` }}>
+            <div key={index} className="relative animate-fade-in-up" style={{ '--animation-delay': `${(index + 2) * 0.1}s` } as React.CSSProperties}>
               <div className="relative rounded-2xl p-8 bg-white shadow-xl border border-swift-blue-100 overflow-hidden">
                 {/* Background gradient */}
                 <div className="absolute inset-0 bg-brand-light/30 opacity-20"></div>
@@ -130,7 +130,7 @@ export default function HowItWorks() {
               </div>
               
               {index < steps.length - 1 && (
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 animate-bounce-custom" style={{ animationDuration: '1.5s' }}>
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 animate-bounce-custom animation-duration-1-5s">
                   <ArrowRight className="w-6 h-6 transform rotate-90" />
                 </div>
               )}

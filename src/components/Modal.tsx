@@ -94,7 +94,7 @@ export default function Modal({ isOpen, onClose, title, children, size = 'md' }:
               <X className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
           </div>
-          <div className="p-3 sm:p-5 md:p-8 overflow-y-auto flex-grow" style={{ maxHeight: 'calc(95vh - 80px)', overflowY: 'auto' }}>
+          <div className="p-3 sm:p-5 md:p-8 flex-grow modal-content-scroll">
             {children}
           </div>
         </div>
