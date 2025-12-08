@@ -260,27 +260,18 @@ export default function Home() {
                   <div className="absolute inset-0 bg-brand-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
                 </button>
                 
-                <button 
-                  onClick={() => setActiveModal('merchant')}
-                  className="group relative overflow-hidden rounded-xl bg-brand-primary px-5 sm:px-7 lg:px-9 py-4 sm:py-5 text-base sm:text-lg font-semibold text-white shadow-lg hover:shadow-brand-primary/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                <a 
+                  href="https://portal.swifttdrop.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative overflow-hidden rounded-xl bg-brand-primary px-5 sm:px-7 lg:px-9 py-4 sm:py-5 text-base sm:text-lg font-semibold text-white shadow-lg hover:shadow-brand-primary/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center justify-center"
                 >
                   <span className="relative z-10 flex items-center justify-center">
                     <Store className="w-5 h-5 mr-3" />
                     Join as Merchant
                   </span>
                   <div className="absolute inset-0 bg-brand-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
-                </button>
-                
-                <button 
-                  onClick={() => setActiveModal('rider')}
-                  className="btn btn-secondary btn-lg group relative overflow-hidden rounded-xl shadow-lg"
-                >
-                  <span className="relative z-10 flex items-center justify-center">
-                    <Truck className="w-5 h-5 mr-3" />
-                    Become a Rider
-                  </span>
-                  <div className="absolute inset-0 bg-brand-dark opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
-                </button>
+                </a>
               </div>
             </div>
             
@@ -597,6 +588,15 @@ export default function Home() {
               </div>
               <div className="w-24 h-12 relative">
                 <Image src="/partners/Uber.png" alt="Partner Logo 5" fill className="object-contain" />
+              </div>
+               <div className="w-24 h-12 relative">
+                <Image src="/partners/ilovalue.jpg" alt="Partner Logo 5" fill className="object-contain" />
+              </div>
+               <div className="w-24 h-12 relative">
+                <Image src="/partners/unleash.jpg" alt="Partner Logo 5" fill className="object-contain" />
+              </div>
+               <div className="w-24 h-12 relative">
+                <Image src="/partners/trendy-baby-wear-logo.png" alt="Partner Logo 5" fill className="object-contain" />
               </div>
             </div>
             </div>

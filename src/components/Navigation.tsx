@@ -97,6 +97,7 @@ export default function Navigation() {
             </Link>
             
             <button 
+              type="button"
               onClick={() => window.location.href = '#hero'}
               className="group relative overflow-hidden rounded-xl btn-primary px-6 py-2.5 text-white font-semibold shadow-lg"
             >
@@ -107,6 +108,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button - only visible on mobile with CSS */}
           <button
+            type="button"
             className="block lg:hidden focus:outline-none transition-colors duration-300"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
@@ -175,6 +177,7 @@ export default function Navigation() {
 
               <div className="pt-6 mt-2 border-t border-gray-700">
                 <button
+                  type="button"
                   className="w-full bg-brand-primary hover:bg-brand-secondary text-white px-6 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-brand-primary/30 text-lg"
                   onClick={() => {
                     window.location.href = '#hero';
