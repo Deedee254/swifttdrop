@@ -1099,7 +1099,7 @@ export default function Home() {
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-gray-300 group-hover:text-white transition-colors duration-300">+254 700 000 000</p>
+                    <p className="text-gray-300 group-hover:text-white transition-colors duration-300">+254 736 772 050</p>
                     <p className="text-swift-blue-600/70 text-sm">Mon-Fri 8am-6pm</p>
                   </div>
                 </li>
