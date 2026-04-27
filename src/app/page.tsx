@@ -38,6 +38,8 @@ import HowItWorks from '@/components/HowItWorks';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import Navigation from '@/components/Navigation';
 import InstallPromptWrapper from '@/components/InstallPromptWrapper';
+import dynamic from 'next/dynamic';
+const DownloadApp = dynamic(() => import('@/components/DownloadApp'));
 
 export default function Home() {
   // We're using useState but not isClient directly - it's used to ensure client-side rendering
@@ -248,27 +250,26 @@ export default function Home() {
                 <span className="block mt-2 text-lg sm:text-xl text-white/80">No app download required.</span>
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start animate-fade-in-up delay-200">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start animate-fade-in-up delay-200">
                 <button 
                   onClick={() => setActiveModal('delivery')}
-                  className="btn btn-primary btn-lg group relative overflow-hidden rounded-xl shadow-lg"
+                  className="btn btn-primary group relative overflow-hidden rounded-xl shadow-lg px-4 py-2 text-sm"
                 >
                   <span className="relative z-10 flex items-center justify-center">
-                    <Package className="w-5 h-5 mr-3" />
+                    <Package className="w-5 h-5 mr-2" />
                     Create Delivery
                   </span>
                   <div className="absolute inset-0 bg-brand-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
                 </button>
-                
-                <a 
-                  href="https://portal.swifttdrop.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative overflow-hidden rounded-xl bg-brand-primary px-5 sm:px-7 lg:px-9 py-4 sm:py-5 text-base sm:text-lg font-semibold text-white shadow-lg hover:shadow-brand-primary/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center justify-center"
+
+                <a
+                  href="/app-release.apk"
+                  download
+                  className="group relative overflow-hidden rounded-xl bg-white/10 border border-white/20 px-4 py-2 text-sm font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center justify-center"
                 >
                   <span className="relative z-10 flex items-center justify-center">
-                    <Store className="w-5 h-5 mr-3" />
-                    Join as Merchant
+                    <Phone className="w-5 h-5 mr-2" />
+                    Download App
                   </span>
                   <div className="absolute inset-0 bg-brand-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
                 </a>
@@ -333,6 +334,9 @@ export default function Home() {
 
       {/* How It Works Section */}
       <HowItWorks />
+
+  {/* Download App Section */}
+  <DownloadApp />
 
       {/* Features Section */}
       <section id="features" className="py-20 sm:py-28 relative overflow-hidden">

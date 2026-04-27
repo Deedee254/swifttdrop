@@ -3,6 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  // Produce a standalone build in .next/standalone for easier deploys
+  output: 'standalone',
   
   // Basic configuration for CSS
   images: {
