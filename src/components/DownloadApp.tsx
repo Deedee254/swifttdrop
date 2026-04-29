@@ -129,7 +129,7 @@ export default function DownloadApp() {
             )}
           </div>
 
-          <p className="text-sm text-gray-500 mt-6">Note: Android only — you may need to allow installs from unknown sources in your device settings. Replace this APK in <code>/public/app-release.apk</code> with your signed release before production.</p>
+          <p className="text-sm text-gray-500 mt-6">Note: Android only — you may need to allow installs from unknown sources in your device settings.</p>
         </div>
       </div>
     </section>

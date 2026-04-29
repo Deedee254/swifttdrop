@@ -578,29 +578,14 @@ export default function Home() {
             <div className="mt-20 text-center">
             <p className="text-gray-500 mb-8 text-sm uppercase tracking-wider font-medium">Trusted by local businesses across Kenya</p>
             <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-70 hover:opacity-100 transition-opacity duration-500">
-              <div className="w-24 h-12 relative">
-                <Image src="/partners/Bolt.png" alt="Partner Logo 1" fill className="object-contain" />
-              </div>
-              <div className="w-24 h-12 relative">
-                <Image src="/partners/faras.png" alt="Partner Logo 2" fill className="object-contain" />
-              </div>
-              <div className="w-24 h-12 relative">
-                <Image src="/partners/wasili.png" alt="Partner Logo 3" fill className="object-contain" />
-              </div>
-              <div className="w-24 h-12 relative">
-                <Image src="/partners/yego.png" alt="Partner Logo 4" fill className="object-contain" />
-              </div>
-              <div className="w-24 h-12 relative">
-                <Image src="/partners/Uber.png" alt="Partner Logo 5" fill className="object-contain" />
+               <div className="w-24 h-12 relative">
+                <Image src="/partners/ilovalue.jpg" alt="Partner Logo 1" fill className="object-contain" />
               </div>
                <div className="w-24 h-12 relative">
-                <Image src="/partners/ilovalue.jpg" alt="Partner Logo 5" fill className="object-contain" />
+                <Image src="/partners/unleash.jpg" alt="Partner Logo 2" fill className="object-contain" />
               </div>
                <div className="w-24 h-12 relative">
-                <Image src="/partners/unleash.jpg" alt="Partner Logo 5" fill className="object-contain" />
-              </div>
-               <div className="w-24 h-12 relative">
-                <Image src="/partners/trendy-baby-wear-logo.png" alt="Partner Logo 5" fill className="object-contain" />
+                <Image src="/partners/trendy-baby-wear-logo.png" alt="Partner Logo 3" fill className="object-contain" />
               </div>
             </div>
             </div>
